@@ -56,3 +56,30 @@ document.addEventListener("keydown", function (e) {
 // btnClose.addEventListener("click", () => {
 //   message.remove();
 // });
+
+
+//======================= styles, attributes, classes ===============================
+const header = document.querySelector(".header");
+
+const message = document.createElement('div');
+
+message.classList.add("cookie-message");
+message.innerHTML = "We use cookies for modern browsers. <button class='btn btn--close-cookie'>Got it!</button>";
+
+header.append(message);
+
+const btnClose = document.querySelector(".btn--close-cookie");
+
+btnClose.addEventListener("click", () => {
+  message.remove();
+});
+
+message.style.backgroundColor = "#37383d";
+// message.style.width = "120%";
+
+document.documentElement.style.setProperty('--color-primary', 'yellow');
+
+// attributes
+const logo = document.querySelector(".nav__logo");
+logo.src = "https://cdn.hubilo.com/logo/1402283/300/1596_9068_763672001621839178.jpg";
+console.log(logo.src);
